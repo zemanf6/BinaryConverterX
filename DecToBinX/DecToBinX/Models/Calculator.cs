@@ -6,7 +6,15 @@ namespace DecToBinX
 {
     class Calculator
     {
+        /// <summary>
+        /// Variable for storing a string process (Decimal to Binary convert)
+        /// </summary>
         public string Process { get; set; }
+
+        /// <summary>
+        /// Decimal to binary convert
+        /// </summary>
+        /// <param name="numberInput">Decimal number, target to convert to binary</param>
         internal string Input(double numberInput)
         {
             Process = "";
@@ -37,14 +45,9 @@ namespace DecToBinX
             Process += "0 | 1";
             numberOutput += "1";
 
-            return Reverse(numberOutput);
+            return Utilities.Reverse(numberOutput);
         }
 
-        private string Reverse(string s)
-        {
-            char[] charArray = s.ToCharArray();
-            Array.Reverse(charArray);
-            return new string(charArray);
-        }
+
     }
 }

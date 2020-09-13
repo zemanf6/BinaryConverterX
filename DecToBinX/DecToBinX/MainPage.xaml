@@ -4,13 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="DecToBinX.MainPage">
+             NavigationPage.HasNavigationBar="False"
+             x:Class="DecToBinX.MainPage"
+>
 
     <StackLayout Margin="10" x:Name="StackLayout">
-        <!-- Place new controls here -->
+
 
         <Image Source="back1b.png" HorizontalOptions="Center"/>
-        <Entry TextChanged="Entry_TextChanged" HorizontalOptions="Center" Placeholder="Number in base 10" HorizontalTextAlignment="Center" x:Name="entry" Keyboard="Numeric"></Entry>
+        <Entry TextChanged="Entry_TextChanged" HorizontalOptions="Center" ClearButtonVisibility="WhileEditing" Placeholder="Number in base 10" HorizontalTextAlignment="Center" x:Name="entry" Keyboard="Numeric"></Entry>
 
         <Button x:Name="button" HorizontalOptions="Center" VerticalOptions="End" Text="Calculate" Margin="0,30,0,0"/>
 

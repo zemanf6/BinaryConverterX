@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:DecToBinX.Behaviors"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="DecToBinX.Page1">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+           
+            <Image Source="background2b.png" HorizontalOptions="Center"/>
+            <Entry HorizontalOptions="Center" ClearButtonVisibility="WhileEditing" Placeholder="Number in base 2" HorizontalTextAlignment="Center" x:Name="binEntry" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <local:CharactersValidation></local:CharactersValidation>
+                </Entry.Behaviors>
+            </Entry>
+
+            <Button HorizontalOptions="Center" VerticalOptions="End" Text="Calculate" x:Name="binButton" Margin="0,30,0,0"/>
+
+            <ScrollView FlowDirection="LeftToRight" Orientation="Vertical" VerticalOptions="End">
+                <Label HorizontalOptions="Center" x:Name="binProcess" Text="..." FontSize="19" VerticalOptions="EndAndExpand"></Label>
+            </ScrollView>
+
+            <Label Text="00000000" HorizontalOptions="Center" x:Name="binResult" VerticalOptions="EndAndExpand" Margin="0,0,0,0" FontAttributes="Bold" FontSize="25"></Label>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

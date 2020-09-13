@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:local="clr-namespace:DecToBinX"
+       mc:Ignorable="d"
+       NavigationPage.HasNavigationBar="False"
+       Shell.NavBarIsVisible="False"
+             x:Class="DecToBinX.AppShell">
+
+        <Tab FlyoutDisplayOptions="AsSingleItem">
+            <ShellContent Title="To binary">
+                <local:MainPage></local:MainPage>
+            </ShellContent>
+            <ShellContent Title="From binary">
+                <local:Page1></local:Page1>
+            </ShellContent>
+        </Tab>
+</Shell>
